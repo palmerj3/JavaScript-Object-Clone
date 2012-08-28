@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="clone.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var test = {
+        'abc' : 123
+      };
+      test2 = {
+        'abc' : 123,
+        'def' : {
+          'abc' : 123
+        }
+      };
+      
+      var test_test = test.clone();
+      test_test.test = 'blah';
+      
+      if (typeof(test['test']) === 'undefined') {
+        console.log('Success!');
+      } else {
+        console.log('Failure!');
+      }
+
+      var test2_test = test2.clone();
+      test2_test.test = 'blah';
+      
+      if (typeof(test2['test']) === 'undefined') {
+        console.log('Success!');
+      } else {
+        console.log('Failure!');
+      }
+    </script>
+  </body>
+</html>
