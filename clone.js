@@ -7,7 +7,7 @@
       for (prop in this) {
         if (this.hasOwnProperty(prop) === true) {
           if (typeof(this[prop]) === 'object') {
-            clonedObject[prop] = this.clone.call(this[prop], this[prop]);
+            clonedObject[prop] = this.clone.call(this[prop]);
           } else {
             clonedObject[prop] = this[prop];
           }
